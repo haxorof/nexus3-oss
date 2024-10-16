@@ -579,7 +579,7 @@
 
 - name: Upload new scripts
   ansible.builtin.unarchive:
-    src: /tmp/nexus-upload-groovy-scripts.tar.gz
+    src: "{{ nexus_local_tmp_dir }}/nexus-upload-groovy-scripts.tar.gz"
     dest: "{{ nexus_data_dir }}/groovy-raw-scripts/new/"
     mode: "0644"
 
